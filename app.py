@@ -8,8 +8,8 @@ st.title("Finance Investment Insights Agent")
 ticker = st.text_input("Enter Stock Ticker (e.g., AAPL):")
 
 if st.button("Analyze"):
-    news = fetch_news(ticker, api_key="a2baa0a6583840ec8a4f95a7184a1c9e")
-    summaries = summarize_news(news, genai_api_key="AIzaSyDdIeTB-jZh54irFmYcofRAc8Zg0WEqqnI")
+    news = fetch_news(ticker, api_key="API_KEY")
+    summaries = summarize_news(news, genai_api_key="API_KEY")
 
     for i, (summary, (title, _)) in enumerate(zip(summaries, news)):
         sentiment = analyze_sentiment(summary)
